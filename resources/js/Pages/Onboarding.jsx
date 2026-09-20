@@ -136,7 +136,7 @@ export default function Onboarding({ initialRole = 'student', initialInstitution
     const selectedRoleObj = roles.find(r => r.id === targetRole) || roles[0];
 
     return (
-        <div className="min-h-[100dvh] bg-slate-50 text-slate-900 flex flex-col justify-between selection:bg-emerald-500/20 selection:text-emerald-900 relative overflow-hidden font-sans">
+        <div className="min-h-[100dvh] bg-slate-50 text-slate-900 flex flex-col justify-between selection:bg-blue-600/20 selection:text-blue-950 relative overflow-hidden font-sans">
             <Head title="Kalibrasi Bilik Latihan : VOIC" />
 
             {/* Subtle Studio Geometry Grid */}
@@ -151,7 +151,7 @@ export default function Onboarding({ initialRole = 'student', initialInstitution
             {/* Top Navigation */}
             <header className="relative z-10 max-w-5xl mx-auto w-full px-6 py-6 flex items-center justify-between">
                 <Link href="/" className="inline-flex items-center gap-2.5">
-                    <div className="w-8 h-8 rounded-lg bg-emerald-50 border border-emerald-500/30 flex items-center justify-center text-emerald-600 shadow-xs">
+                    <div className="w-8 h-8 rounded-lg bg-blue-50 border border-blue-200/80 flex items-center justify-center text-blue-700 shadow-xs">
                         <Waveform size={18} weight="bold" />
                     </div>
                     <span className="font-mono text-sm tracking-widest text-slate-800 font-semibold uppercase">
@@ -171,7 +171,7 @@ export default function Onboarding({ initialRole = 'student', initialInstitution
                     <motion.div 
                         animate={{ width: `${(step / 4) * 100}%` }}
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                        className="h-full bg-emerald-600 rounded-full shadow-xs"
+                        className="h-full bg-blue-700 rounded-full shadow-xs"
                     />
                 </div>
 
@@ -187,7 +187,7 @@ export default function Onboarding({ initialRole = 'student', initialInstitution
                             className="bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-8 shadow-xs space-y-6"
                         >
                             <div className="space-y-1.5">
-                                <div className="text-[11px] font-mono text-emerald-700 uppercase font-semibold">
+                                <div className="text-[11px] font-mono text-blue-700 uppercase font-semibold">
                                     LANGKAH 1 : DIAGNOSTIK AWAL
                                 </div>
                                 <h1 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
@@ -209,16 +209,16 @@ export default function Onboarding({ initialRole = 'student', initialInstitution
                                             onClick={() => setPrimaryChallenge(c.id)}
                                             className={`p-4 rounded-xl border text-left flex flex-col justify-between gap-3 transition-all cursor-pointer relative ${
                                                 isSelected
-                                                    ? 'bg-emerald-50/70 border-emerald-500 text-slate-900 ring-1 ring-emerald-500/40 shadow-xs'
+                                                    ? 'bg-blue-50/80 border-blue-500 text-slate-900 ring-1 ring-blue-500/40 shadow-xs'
                                                     : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-slate-50/60'
                                             }`}
                                         >
                                             <div className="flex items-center justify-between">
-                                                <div className={`p-2 rounded-lg ${isSelected ? 'bg-emerald-100 text-emerald-700' : 'bg-slate-100 text-slate-600'}`}>
+                                                <div className={`p-2 rounded-lg ${isSelected ? 'bg-blue-100 text-blue-800' : 'bg-slate-100 text-slate-600'}`}>
                                                     <Icon size={20} weight={isSelected ? 'bold' : 'regular'} />
                                                 </div>
                                                 {isSelected && (
-                                                    <span className="w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center shadow-xs">
+                                                    <span className="w-5 h-5 rounded-full bg-blue-700 text-white flex items-center justify-center shadow-xs">
                                                         <Check size={12} weight="bold" />
                                                     </span>
                                                 )}
@@ -233,7 +233,7 @@ export default function Onboarding({ initialRole = 'student', initialInstitution
                                                 </p>
                                             </div>
 
-                                            <div className="text-[10px] font-mono font-semibold text-emerald-700">
+                                            <div className="text-[10px] font-mono font-semibold text-blue-700">
                                                 Fokus: {c.badge}
                                             </div>
                                         </button>
@@ -245,7 +245,7 @@ export default function Onboarding({ initialRole = 'student', initialInstitution
                                 <button
                                     type="button"
                                     onClick={() => setStep(2)}
-                                    className="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold flex items-center gap-2 transition-all active:scale-[0.98] shadow-xs cursor-pointer"
+                                    className="px-6 py-3 rounded-xl bg-blue-700 hover:bg-blue-800 text-white text-xs font-semibold flex items-center gap-2 transition-all active:scale-[0.98] shadow-xs cursor-pointer"
                                 >
                                     <span>Lanjut ke Skenario</span>
                                     <ArrowRight size={15} weight="bold" />
@@ -265,7 +265,7 @@ export default function Onboarding({ initialRole = 'student', initialInstitution
                             className="bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-8 shadow-xs space-y-6"
                         >
                             <div className="space-y-1.5">
-                                <div className="text-[11px] font-mono text-emerald-700 uppercase font-semibold">
+                                <div className="text-[11px] font-mono text-blue-700 uppercase font-semibold">
                                     LANGKAH 2 : SASARAN & TEMPO
                                 </div>
                                 <h1 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
@@ -287,17 +287,17 @@ export default function Onboarding({ initialRole = 'student', initialInstitution
                                             onClick={() => setTargetRole(r.id)}
                                             className={`w-full p-4 rounded-xl border text-left flex items-start gap-4 transition-all cursor-pointer ${
                                                 isSelected
-                                                    ? 'bg-emerald-50/70 border-emerald-500 text-slate-900 ring-1 ring-emerald-500/40 shadow-xs'
+                                                    ? 'bg-blue-50/80 border-blue-500 text-slate-900 ring-1 ring-blue-500/40 shadow-xs'
                                                     : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-slate-50/60'
                                             }`}
                                         >
-                                            <div className={`p-2.5 rounded-lg shrink-0 ${isSelected ? 'bg-emerald-100 text-emerald-700' : 'bg-slate-100 text-slate-600'}`}>
+                                            <div className={`p-2.5 rounded-lg shrink-0 ${isSelected ? 'bg-blue-100 text-blue-800' : 'bg-slate-100 text-slate-600'}`}>
                                                 <Icon size={22} weight={isSelected ? 'bold' : 'regular'} />
                                             </div>
                                             <div className="flex-1">
                                                 <div className="flex items-center justify-between">
                                                     <span className="text-sm font-bold text-slate-900">{r.title}</span>
-                                                    {isSelected && <Check size={16} className="text-emerald-600" weight="bold" />}
+                                                    {isSelected && <Check size={16} className="text-blue-700" weight="bold" />}
                                                 </div>
                                                 <p className="text-xs text-slate-600 mt-0.5 leading-relaxed">{r.desc}</p>
                                             </div>
@@ -319,7 +319,7 @@ export default function Onboarding({ initialRole = 'student', initialInstitution
                                             onClick={() => setTargetDuration(d.sec)}
                                             className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
                                                 targetDuration === d.sec
-                                                    ? 'bg-emerald-50/70 border-emerald-500 text-emerald-900 ring-1 ring-emerald-500/30 shadow-xs'
+                                                    ? 'bg-blue-50/80 border-blue-500 text-blue-950 ring-1 ring-blue-500/30 shadow-xs'
                                                     : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-slate-50/60'
                                             }`}
                                         >
@@ -342,7 +342,7 @@ export default function Onboarding({ initialRole = 'student', initialInstitution
                                 <button
                                     type="button"
                                     onClick={() => setStep(3)}
-                                    className="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold flex items-center gap-2 transition-all active:scale-[0.98] shadow-xs cursor-pointer"
+                                    className="px-6 py-3 rounded-xl bg-blue-700 hover:bg-blue-800 text-white text-xs font-semibold flex items-center gap-2 transition-all active:scale-[0.98] shadow-xs cursor-pointer"
                                 >
                                     <span>Lanjut Uji Suara</span>
                                     <ArrowRight size={15} weight="bold" />
@@ -362,7 +362,7 @@ export default function Onboarding({ initialRole = 'student', initialInstitution
                             className="bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-8 shadow-xs space-y-6"
                         >
                             <div className="space-y-1.5">
-                                <div className="text-[11px] font-mono text-emerald-700 uppercase font-semibold">
+                                <div className="text-[11px] font-mono text-blue-700 uppercase font-semibold">
                                     LANGKAH 3 : KALIBRASI AUDIO BILIK
                                 </div>
                                 <h1 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
@@ -384,7 +384,7 @@ export default function Onboarding({ initialRole = 'student', initialInstitution
                                         className={`px-4 py-2.5 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all cursor-pointer ${
                                             isTestingMic
                                                 ? 'bg-rose-50 border border-rose-200 text-rose-700'
-                                                : 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-xs'
+                                                : 'bg-blue-700 hover:bg-blue-800 text-white shadow-xs'
                                         }`}
                                     >
                                         <Microphone size={16} weight="bold" />
@@ -400,7 +400,7 @@ export default function Onboarding({ initialRole = 'student', initialInstitution
 
                             <div className="p-4 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-600 space-y-1">
                                 <div className="text-slate-900 font-semibold flex items-center gap-1.5">
-                                    <ShieldCheck size={16} className="text-emerald-600" />
+                                    <ShieldCheck size={16} className="text-blue-700" />
                                     <span>Privasi Audio 100% On-Device</span>
                                 </div>
                                 <p className="leading-relaxed">
@@ -420,7 +420,7 @@ export default function Onboarding({ initialRole = 'student', initialInstitution
                                 <button
                                     type="button"
                                     onClick={() => setStep(4)}
-                                    className="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold flex items-center gap-2 transition-all active:scale-[0.98] shadow-xs cursor-pointer"
+                                    className="px-6 py-3 rounded-xl bg-blue-700 hover:bg-blue-800 text-white text-xs font-semibold flex items-center gap-2 transition-all active:scale-[0.98] shadow-xs cursor-pointer"
                                 >
                                     <span>Lihat Cetak Biru Latihan</span>
                                     <ArrowRight size={15} weight="bold" />
@@ -440,7 +440,7 @@ export default function Onboarding({ initialRole = 'student', initialInstitution
                             className="bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-8 shadow-xs space-y-6"
                         >
                             <div className="space-y-1.5">
-                                <div className="text-[11px] font-mono text-emerald-700 uppercase font-semibold">
+                                <div className="text-[11px] font-mono text-blue-700 uppercase font-semibold">
                                     LANGKAH 4 : CETAK BIRU SIAP
                                 </div>
                                 <h1 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
@@ -452,10 +452,10 @@ export default function Onboarding({ initialRole = 'student', initialInstitution
                             </div>
 
                             {/* Blueprint Card */}
-                            <div className="p-5 sm:p-6 bg-slate-50 border border-emerald-500/30 rounded-2xl space-y-4 shadow-xs">
+                            <div className="p-5 sm:p-6 bg-slate-50 border border-blue-500/30 rounded-2xl space-y-4 shadow-xs">
                                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 pb-3">
                                     <div>
-                                        <span className="text-[10px] font-mono text-emerald-700 uppercase font-bold">
+                                        <span className="text-[10px] font-mono text-blue-700 uppercase font-bold">
                                             MODUL UTAMA
                                         </span>
                                         <div className="text-base font-bold text-slate-900">
@@ -470,7 +470,7 @@ export default function Onboarding({ initialRole = 'student', initialInstitution
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 font-mono text-xs">
                                     <div className="p-3 bg-white border border-slate-200 rounded-xl space-y-1 shadow-xs">
                                         <div className="text-[10px] text-slate-500 uppercase">FOKUS PERBAIKAN</div>
-                                        <div className="text-emerald-700 font-bold text-sm">
+                                        <div className="text-blue-700 font-bold text-sm">
                                             {selectedChallengeObj.title}
                                         </div>
                                         <div className="text-[10px] text-slate-600">{selectedChallengeObj.badge}</div>
@@ -508,7 +508,7 @@ export default function Onboarding({ initialRole = 'student', initialInstitution
                                 <button
                                     type="button"
                                     onClick={handleFinishOnboarding}
-                                    className="px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold flex items-center gap-2.5 transition-all active:scale-[0.98] shadow-xs cursor-pointer"
+                                    className="px-6 py-3.5 rounded-xl bg-blue-700 hover:bg-blue-800 text-white text-sm font-semibold flex items-center gap-2.5 transition-all active:scale-[0.98] shadow-xs cursor-pointer"
                                 >
                                     <span>Buka Bilik Latihan Sekarang</span>
                                     <ArrowRight size={16} weight="bold" />

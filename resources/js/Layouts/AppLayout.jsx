@@ -53,14 +53,14 @@ export default function AppLayout({
                     <button
                         type="button"
                         onClick={() => setMobileOpen(true)}
-                        className="p-1.5 -ml-1 rounded-lg text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
+                        className="p-1.5 -ml-1 rounded-lg text-slate-600 hover:text-blue-900 dark:text-slate-300 dark:hover:text-white hover:bg-blue-50/60 dark:hover:bg-slate-800 transition-colors cursor-pointer"
                         aria-label="Buka Menu Navigasi"
                     >
                         <List size={20} weight="bold" />
                     </button>
 
                     <Link href="/" className="flex items-center gap-2">
-                        <div className="w-6.5 h-6.5 rounded-lg bg-slate-900 dark:bg-white text-white dark:text-slate-900 flex items-center justify-center shadow-2xs">
+                        <div className="w-6.5 h-6.5 rounded-lg bg-slate-900 dark:bg-white text-white dark:text-slate-900 flex items-center justify-center shadow-2xs ring-1 ring-blue-500/20">
                             <Waveform size={14} weight="bold" />
                         </div>
                         <span className="font-mono font-bold text-sm tracking-wider text-slate-900 dark:text-white">
@@ -70,8 +70,8 @@ export default function AppLayout({
                 </div>
 
                 <div className="flex items-center gap-2">
-                    <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                    <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200/70 dark:border-blue-800/40 text-[11px] font-mono text-blue-900 dark:text-blue-300">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                         <span>Gemini 3.6</span>
                     </div>
                 </div>
@@ -84,12 +84,12 @@ export default function AppLayout({
                 
                 {/* Desktop Top Floating / Bar when sidebar is collapsed */}
                 {collapsed && (
-                    <div className="hidden lg:flex sticky top-0 z-20 bg-white/90 dark:bg-[#0c0e14]/90 backdrop-blur-md border-b border-slate-200/70 dark:border-slate-800/70 px-4 h-12 items-center justify-between shadow-2xs">
+                    <div className="hidden lg:flex sticky top-0 z-20 bg-white/90 dark:bg-[#0c0e14]/90 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800/80 px-4 h-12 items-center justify-between shadow-2xs">
                         <div className="flex items-center gap-3">
                             <button
                                 type="button"
                                 onClick={toggleCollapse}
-                                className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-xs font-medium cursor-pointer"
+                                className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-slate-700 hover:text-blue-950 dark:text-slate-300 dark:hover:text-white hover:bg-blue-50/70 dark:hover:bg-slate-800 transition-colors text-xs font-semibold cursor-pointer"
                                 title="Buka Sidebar Navigasi"
                             >
                                 <SidebarSimple size={18} />
@@ -99,7 +99,7 @@ export default function AppLayout({
                             <div className="h-4 w-px bg-slate-200 dark:bg-slate-800" />
 
                             <Link href="/" className="flex items-center gap-2">
-                                <div className="w-6 h-6 rounded-md bg-slate-900 dark:bg-white text-white dark:text-slate-900 flex items-center justify-center">
+                                <div className="w-6 h-6 rounded-md bg-slate-900 dark:bg-white text-white dark:text-slate-900 flex items-center justify-center ring-1 ring-blue-500/20 shadow-2xs">
                                     <Waveform size={14} weight="bold" />
                                 </div>
                                 <span className="font-mono font-bold text-xs tracking-wider text-slate-900 dark:text-white">
@@ -109,8 +109,8 @@ export default function AppLayout({
                         </div>
 
                         <div className="flex items-center gap-2">
-                            <div className="flex items-center gap-1.5 text-[11px] font-mono text-slate-500 dark:text-slate-400">
-                                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                            <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-blue-50/80 dark:bg-blue-950/50 border border-blue-200/70 dark:border-blue-800/40 text-[11px] font-mono text-blue-900 dark:text-blue-300">
+                                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                                 <span>Online</span>
                             </div>
                         </div>

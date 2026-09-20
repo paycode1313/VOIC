@@ -31,7 +31,7 @@ export default function Login() {
     };
 
     return (
-        <div className="min-h-[100dvh] bg-slate-50 text-slate-900 flex flex-col justify-between selection:bg-emerald-500/20 selection:text-emerald-900 relative overflow-hidden font-sans">
+        <div className="min-h-[100dvh] bg-slate-50 text-slate-900 flex flex-col justify-between selection:bg-blue-600/20 selection:text-blue-950 relative overflow-hidden font-sans">
             <Head title="Masuk Studio : VOIC" />
 
             {/* Subtle Studio Geometry Grid */}
@@ -46,7 +46,7 @@ export default function Login() {
             {/* Minimal Header */}
             <header className="relative z-10 max-w-7xl mx-auto w-full px-6 py-6 flex items-center justify-between">
                 <Link href="/" className="inline-flex items-center gap-2.5 group">
-                    <div className="w-8 h-8 rounded-lg bg-emerald-50 border border-emerald-500/30 flex items-center justify-center text-emerald-600 group-hover:bg-emerald-100 transition-all duration-200 shadow-xs">
+                    <div className="w-8 h-8 rounded-lg bg-blue-50 border border-blue-200/80 flex items-center justify-center text-blue-700 group-hover:bg-blue-100 transition-all duration-200 shadow-xs">
                         <Waveform size={18} weight="bold" />
                     </div>
                     <span className="font-mono text-sm tracking-widest text-slate-800 font-semibold uppercase">
@@ -121,7 +121,7 @@ export default function Login() {
                                         placeholder="nama@email.com"
                                         onChange={(e) => setData('email', e.target.value)}
                                         required
-                                        className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 transition-colors"
+                                        className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-colors"
                                     />
                                 </div>
                                 {errors.email && (
@@ -152,7 +152,7 @@ export default function Login() {
                                         placeholder="••••••••"
                                         onChange={(e) => setData('password', e.target.value)}
                                         required
-                                        className="w-full pl-10 pr-10 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 transition-colors"
+                                        className="w-full pl-10 pr-10 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-colors"
                                     />
                                     <button
                                         type="button"
@@ -174,7 +174,7 @@ export default function Login() {
                                         type="checkbox"
                                         checked={data.remember}
                                         onChange={(e) => setData('remember', e.target.checked)}
-                                        className="w-4 h-4 rounded bg-slate-50 border-slate-300 text-emerald-600 focus:ring-0 focus:ring-offset-0 transition-colors"
+                                        className="w-4 h-4 rounded bg-slate-50 border-slate-300 text-blue-700 focus:ring-0 focus:ring-offset-0 transition-colors"
                                     />
                                     <span className="text-xs text-slate-600">Ingat sesi saya</span>
                                 </label>
@@ -185,7 +185,7 @@ export default function Login() {
                                 whileTap={shouldReduceMotion ? {} : { scale: 0.98 }}
                                 type="submit"
                                 disabled={processing}
-                                className="w-full mt-2 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 disabled:opacity-50 text-white font-semibold text-sm flex items-center justify-center gap-2 shadow-xs transition-colors cursor-pointer"
+                                className="w-full mt-2 py-3 px-4 rounded-xl bg-blue-700 hover:bg-blue-800 disabled:opacity-50 text-white font-semibold text-sm flex items-center justify-center gap-2 shadow-xs transition-colors cursor-pointer"
                             >
                                 <span>{processing ? 'Memproses...' : 'Masuk ke Studio'}</span>
                                 <ArrowRight size={16} weight="bold" />
@@ -195,10 +195,10 @@ export default function Login() {
                         {/* Privacy Footer */}
                         <div className="mt-6 pt-5 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-mono">
                             <div className="flex items-center gap-1.5">
-                                <ShieldCheck size={14} className="text-emerald-600" />
+                                <ShieldCheck size={14} className="text-blue-700" />
                                 <span>On-Device Privacy</span>
                             </div>
-                            <Link href="/register" className="text-emerald-600 font-semibold hover:underline">
+                            <Link href="/register" className="text-blue-700 font-semibold hover:underline">
                                 Belum punya akun? Daftar &rarr;
                             </Link>
                         </div>

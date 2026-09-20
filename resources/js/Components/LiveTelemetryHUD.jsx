@@ -31,8 +31,8 @@ export default function LiveTelemetryHUD({
         switch (tone) {
             case 'tegang': return { label: 'Nada Tegang / Meninggi', color: isInline ? 'text-amber-800 border-amber-300 bg-amber-50' : 'text-amber-400 border-amber-500/40 bg-amber-950/40' };
             case 'monoton': return { label: 'Nada Datar / Monoton', color: isInline ? 'text-sky-800 border-sky-300 bg-sky-50' : 'text-sky-400 border-sky-500/40 bg-sky-950/40' };
-            case 'dinamis': return { label: 'Nada Dinamis & Persuasif', color: isInline ? 'text-emerald-800 border-emerald-300 bg-emerald-50' : 'text-emerald-400 border-emerald-500/40 bg-emerald-950/40' };
-            default: return { label: 'Nada Tenang & Terkontrol', color: isInline ? 'text-emerald-800 border-emerald-300 bg-emerald-50' : 'text-emerald-400 border-emerald-500/40 bg-emerald-950/40' };
+            case 'dinamis': return { label: 'Nada Dinamis & Persuasif', color: isInline ? 'text-blue-900 border-blue-300 bg-blue-50' : 'text-blue-400 border-blue-500/40 bg-blue-950/40' };
+            default: return { label: 'Nada Tenang & Terkontrol', color: isInline ? 'text-blue-900 border-blue-200 bg-blue-50' : 'text-blue-400 border-blue-500/40 bg-blue-950/40' };
         }
     };
 
@@ -40,7 +40,7 @@ export default function LiveTelemetryHUD({
         const isInline = mode === 'inline';
         switch (expr) {
             case 'tegang': return { label: 'Wajah Tegang / Kaku', color: isInline ? 'text-amber-800 border-amber-300 bg-amber-50' : 'text-amber-400 border-amber-500/40 bg-amber-950/40' };
-            case 'tersenyum': return { label: 'Tersenyum & Ramah', color: isInline ? 'text-emerald-800 border-emerald-300 bg-emerald-50' : 'text-emerald-300 border-emerald-500/40 bg-emerald-950/40' };
+            case 'tersenyum': return { label: 'Tersenyum & Ramah', color: isInline ? 'text-blue-900 border-blue-200 bg-blue-50' : 'text-blue-300 border-blue-500/40 bg-blue-950/40' };
             case 'ragu': return { label: 'Ekspresi Ragu / Menunduk', color: isInline ? 'text-rose-800 border-rose-300 bg-rose-50' : 'text-rose-400 border-rose-500/40 bg-rose-950/40' };
             default: return { label: 'Fokus & Percaya Diri', color: isInline ? 'text-slate-700 border-slate-300 bg-slate-100' : 'text-slate-200 border-white/[0.1] bg-[#141822]' };
         }
@@ -178,17 +178,17 @@ export default function LiveTelemetryHUD({
                         transition={{ duration: 0.2 }}
                         className={`p-3 rounded-xl shadow-md text-xs flex items-start justify-between gap-3 ${
                             mode === 'inline'
-                                ? 'bg-white border border-indigo-200 text-slate-800'
-                                : 'bg-[#0d121c]/95 border border-indigo-500/40 text-slate-100 backdrop-blur-md pointer-events-auto'
+                                ? 'bg-white border border-blue-200 text-slate-800'
+                                : 'bg-[#0f172a]/95 border border-blue-500/40 text-slate-100 backdrop-blur-md pointer-events-auto'
                         }`}
                     >
                         <div className="flex items-start gap-2.5">
-                            <div className="w-6 h-6 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-500/40 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0 mt-0.5">
+                            <div className="w-6 h-6 rounded-lg bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-500/40 text-blue-700 dark:text-blue-300 flex items-center justify-center shrink-0 mt-0.5">
                                 <Sparkle size={14} weight="bold" />
                             </div>
                             <div className="space-y-0.5">
                                 <div className="flex items-center gap-2">
-                                    <span className="font-mono text-[10px] font-bold uppercase text-indigo-600 dark:text-indigo-400 tracking-wider">
+                                    <span className="font-mono text-[10px] font-bold uppercase text-blue-700 dark:text-blue-400 tracking-wider">
                                         SOLUSI REAL-TIME AI
                                     </span>
                                     <span className="text-[10px] font-mono text-slate-400">

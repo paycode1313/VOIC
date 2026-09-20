@@ -794,7 +794,7 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
     const lastAiMessage = [...messages].reverse().find(m => m.sender === 'ai');
 
     return (
-        <div className="min-h-[100dvh] bg-slate-50 text-slate-900 flex flex-col justify-between selection:bg-emerald-500/20 selection:text-emerald-900 relative overflow-hidden font-sans">
+        <div className="min-h-[100dvh] bg-slate-50 text-slate-900 flex flex-col justify-between selection:bg-blue-600/20 selection:text-blue-950 relative overflow-hidden font-sans">
             <Head title={`Panggilan AI: ${persona.name} : VOIC`} />
 
             {/* Subtle Studio Geometry Grid */}
@@ -809,13 +809,13 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
             {/* Top Call Navigation Bar */}
             <header className="relative z-30 max-w-7xl mx-auto w-full px-4 sm:px-6 h-16 flex items-center justify-between border-b border-slate-200 bg-white/90 backdrop-blur-md">
                 <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-emerald-50 border border-emerald-500/30 flex items-center justify-center text-emerald-600 shrink-0 shadow-xs">
+                    <div className="w-8 h-8 rounded-lg bg-blue-50 border border-blue-200/80 flex items-center justify-center text-blue-700 shrink-0 shadow-xs">
                         <Waveform size={18} weight="bold" />
                     </div>
                     <div>
                         <div className="flex items-center gap-2">
                             <span className="font-bold text-sm text-slate-900 truncate">{persona.name}</span>
-                            <span className="text-[10px] font-mono text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-500/30 shrink-0 font-semibold">
+                            <span className="text-[10px] font-mono text-blue-900 bg-blue-50 px-2 py-0.5 rounded-full border border-blue-200/80 shrink-0 font-semibold">
                                 AI Lokal Buatan Kita
                             </span>
                             <span className="text-[10px] font-mono text-slate-600 bg-slate-100 px-2 py-0.5 rounded border border-slate-200 shrink-0">
@@ -836,14 +836,14 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                         onClick={handleToggleToneMode}
                         className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs font-medium transition-all cursor-pointer shadow-xs ${
                             toneMode === 'casual'
-                                ? 'bg-emerald-50 border-emerald-500/60 text-emerald-800 ring-1 ring-emerald-500/40 font-semibold'
+                                ? 'bg-blue-50 border-blue-500/60 text-blue-950 ring-1 ring-blue-500/40 font-semibold'
                                 : 'bg-white border-slate-200 text-slate-700 hover:text-slate-900 hover:border-slate-300'
                         }`}
                         title="Klik untuk mengganti gaya bicara (Santai Luwes atau Formal)"
                     >
                         {toneMode === 'casual' ? (
                             <>
-                                <Coffee size={14} weight="fill" className="text-emerald-600" />
+                                <Coffee size={14} weight="fill" className="text-blue-700" />
                                 <span className="hidden sm:inline">Mode:</span>
                                 <span>Santai & Akrab</span>
                             </>
@@ -861,7 +861,7 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                         onClick={() => setShowKeyModal(true)}
                         className={`hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border font-mono text-[11px] transition-colors cursor-pointer ${
                             engineStatus?.ollama?.is_running
-                                ? 'bg-emerald-50 border-emerald-500/40 text-emerald-800 font-semibold'
+                                ? 'bg-blue-50 border-blue-200/80 text-blue-950 font-semibold'
                                 : (keyStatus.has_key
                                     ? 'bg-sky-50 border-sky-500/40 text-sky-800 font-semibold'
                                     : 'bg-slate-100 border-slate-200 text-slate-600 hover:text-slate-900')
@@ -882,7 +882,7 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                     </div>
 
                     <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-700">
-                        <span className="text-emerald-600 font-semibold">AI:</span>
+                        <span className="text-blue-700 font-semibold">AI:</span>
                         <span className="capitalize text-slate-800 font-medium">
                             {callStatus === 'speaking' ? 'Berbicara' : callStatus === 'thinking' ? 'Berpikir...' : callStatus === 'listening' ? 'Menyimak' : 'Siap'}
                         </span>
@@ -913,18 +913,18 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                         <div className="lg:col-span-7 bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-7 flex flex-col justify-between shadow-xs relative overflow-hidden min-h-[380px]">
                             {/* Ambient Glow according to status */}
                             <div className={`absolute top-0 right-0 w-80 h-80 rounded-full blur-3xl pointer-events-none transition-all duration-700 ${
-                                callStatus === 'speaking' ? 'bg-emerald-500/10' : callStatus === 'thinking' ? 'bg-amber-500/10' : 'bg-slate-100'
+                                callStatus === 'speaking' ? 'bg-blue-500/10' : callStatus === 'thinking' ? 'bg-amber-500/10' : 'bg-slate-100'
                             }`} />
 
                             {/* Top AI Status Tag */}
                             <div className="flex items-center justify-between relative z-10">
                                 <div className="flex items-center gap-2">
-                                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
+                                    <span className="w-2.5 h-2.5 rounded-full bg-blue-600" />
                                     <span className="font-mono text-xs font-bold text-slate-900 uppercase">
                                         {persona.name}
                                     </span>
                                 </div>
-                                <span className="text-[10px] font-mono text-emerald-800 uppercase bg-emerald-50 px-2 py-0.5 rounded border border-emerald-500/30 font-semibold">
+                                <span className="text-[10px] font-mono text-blue-900 uppercase bg-blue-50 px-2 py-0.5 rounded border border-blue-200/80 font-semibold">
                                     MULTIMODAL COACHING
                                 </span>
                             </div>
@@ -935,7 +935,7 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                                     <motion.div 
                                         animate={
                                             callStatus === 'speaking' 
-                                                ? { scale: [1, 1.25, 1], opacity: [0.6, 1, 0.6] }
+                                                 ? { scale: [1, 1.25, 1], opacity: [0.6, 1, 0.6] }
                                                 : callStatus === 'thinking'
                                                     ? { rotate: 360 }
                                                     : { scale: 1, opacity: 0.5 }
@@ -947,9 +947,9 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                                                     ? { duration: 2, repeat: Infinity, ease: 'linear' }
                                                     : { duration: 0.3 }
                                         }
-                                        className="absolute inset-0 rounded-full border border-emerald-500/40 bg-emerald-500/10"
+                                        className="absolute inset-0 rounded-full border border-blue-500/40 bg-blue-500/10"
                                     />
-                                    <div className="w-18 h-18 rounded-full bg-gradient-to-br from-emerald-600 to-teal-700 flex items-center justify-center text-white text-2xl font-bold shadow-md border border-white/60">
+                                    <div className="w-18 h-18 rounded-full bg-gradient-to-br from-blue-700 to-slate-900 flex items-center justify-center text-white text-2xl font-bold shadow-md border border-white/60">
                                         {persona.name.charAt(0)}
                                     </div>
                                 </div>
@@ -958,7 +958,7 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                                     <div className="text-sm font-semibold text-slate-900">
                                         {persona.name}
                                     </div>
-                                    <div className="text-xs font-mono font-medium text-emerald-700">
+                                    <div className="text-xs font-mono font-medium text-blue-700">
                                         {callStatus === 'speaking' ? 'Sedang Berbicara...' : callStatus === 'thinking' ? 'Menganalisis Jawaban & Nada Anda...' : 'Menyimak Paparan Anda...'}
                                     </div>
                                 </div>
@@ -979,9 +979,9 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                             {/* Bottom: Multimodal Voice, Tone & Face Analysis Card */}
                             <div className="relative z-10 mt-2 space-y-2">
                                 {(lastAiMessage?.vocal_tone_analysis || lastAiMessage?.actionable_solution) && (
-                                    <div className="p-3 bg-slate-50 border border-emerald-500/30 rounded-xl text-xs space-y-2 shadow-xs">
+                                    <div className="p-3 bg-slate-50 border border-blue-200/80 rounded-xl text-xs space-y-2 shadow-xs">
                                         <div className="flex items-center justify-between border-b border-slate-200 pb-1.5 font-mono text-[10px]">
-                                            <span className="text-emerald-700 font-bold flex items-center gap-1.5">
+                                            <span className="text-blue-700 font-bold flex items-center gap-1.5">
                                                 <Lightning size={13} weight="fill" />
                                                 DETEKSI SUARA & REAKSI WAJAH ANDA
                                             </span>
@@ -1004,8 +1004,8 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                                         </div>
 
                                         {lastAiMessage.actionable_solution && (
-                                            <div className="p-2 bg-emerald-50 border border-emerald-500/30 rounded-lg text-[11px] text-emerald-800 flex items-start gap-2">
-                                                <Sparkle size={14} className="text-emerald-600 shrink-0 mt-0.5" />
+                                            <div className="p-2 bg-blue-50 border border-blue-200/80 rounded-lg text-[11px] text-blue-950 flex items-start gap-2">
+                                                <Sparkle size={14} className="text-blue-700 shrink-0 mt-0.5" />
                                                 <div>
                                                     <span className="font-bold text-slate-900">Solusi Praktis AI: </span>
                                                     {lastAiMessage.actionable_solution}
@@ -1071,7 +1071,7 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                             {/* Bottom: Live Transcript Capture Overlay */}
                             <div className="relative z-20 p-3 bg-gradient-to-t from-black/85 via-black/50 to-transparent">
                                 {currentTranscript ? (
-                                    <div className="p-2.5 bg-black/85 border border-emerald-500/40 rounded-xl text-xs text-emerald-300 font-mono shadow-lg">
+                                    <div className="p-2.5 bg-black/85 border border-blue-500/40 rounded-xl text-xs text-blue-300 font-mono shadow-lg">
                                         <span className="text-slate-400 text-[10px] block mb-0.5 font-bold">Mendengar ucapan Anda:</span>
                                         "{currentTranscript}"
                                     </div>
@@ -1088,12 +1088,12 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                     <div className="max-w-2xl mx-auto w-full bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-10 shadow-xs flex flex-col items-center justify-between text-center space-y-6 relative overflow-hidden">
                         {/* Ambient Glow */}
                         <div className={`absolute -top-10 left-1/2 -translate-x-1/2 w-96 h-96 rounded-full blur-3xl pointer-events-none transition-all duration-700 ${
-                            callStatus === 'speaking' ? 'bg-emerald-500/10' : 'bg-slate-100'
+                            callStatus === 'speaking' ? 'bg-blue-500/10' : 'bg-slate-100'
                         }`} />
 
                         {/* Caller Info */}
                         <div className="space-y-1 relative z-10">
-                            <div className="text-xs font-mono text-emerald-700 uppercase tracking-widest font-semibold">
+                            <div className="text-xs font-mono text-blue-700 uppercase tracking-widest font-semibold">
                                 PANGGILAN SUARA DUA ARAH · ANALISIS NADA AKTIF
                             </div>
                             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
@@ -1115,9 +1115,9 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                                             : { scale: 1, opacity: 0.3 }
                                 }
                                 transition={{ duration: 1.4, repeat: Infinity, ease: 'easeInOut' }}
-                                className="absolute inset-0 rounded-full border-2 border-emerald-500 bg-emerald-500/10"
+                                className="absolute inset-0 rounded-full border-2 border-blue-600 bg-blue-500/10"
                             />
-                            <div className="w-28 h-28 rounded-full bg-gradient-to-br from-emerald-600 to-teal-700 border-2 border-white/60 flex items-center justify-center text-white text-3xl font-bold shadow-md">
+                            <div className="w-28 h-28 rounded-full bg-gradient-to-br from-blue-700 to-slate-900 border-2 border-white/60 flex items-center justify-center text-white text-3xl font-bold shadow-md">
                                 {persona.name.charAt(0)}
                             </div>
                         </div>
@@ -1154,15 +1154,15 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                         <motion.div
                             initial={shouldReduce ? false : { opacity: 0, y: 8 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="p-3 bg-white/95 border border-emerald-500/40 rounded-2xl shadow-lg flex items-center justify-between gap-3 backdrop-blur-md"
+                            className="p-3 bg-white/95 border border-blue-500/40 rounded-2xl shadow-lg flex items-center justify-between gap-3 backdrop-blur-md"
                         >
                             <div className="flex items-center gap-2.5 min-w-0 flex-1">
                                 <span className="relative flex h-3 w-3 shrink-0">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-600" />
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
+                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-700" />
                                 </span>
                                 <div className="min-w-0 flex-1">
-                                    <div className="text-[10px] font-mono text-emerald-700 font-bold uppercase tracking-wider flex items-center gap-2">
+                                    <div className="text-[10px] font-mono text-blue-700 font-bold uppercase tracking-wider flex items-center gap-2">
                                         <span>Mendengarkan Ucapan Anda</span>
                                         <span className="text-slate-500 font-normal hidden sm:inline">(Jeda 1.8 detik kirim otomatis)</span>
                                     </div>
@@ -1183,7 +1183,7 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                                             handleUserSubmit(utterance);
                                         }
                                     }}
-                                    className="px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs shadow-xs transition-all cursor-pointer flex items-center gap-1.5"
+                                    className="px-3 py-1.5 rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-semibold text-xs shadow-xs transition-all cursor-pointer flex items-center gap-1.5"
                                 >
                                     <PaperPlaneRight size={13} weight="bold" />
                                     <span>Kirim Sekarang</span>
@@ -1248,7 +1248,7 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                         <button
                             type="submit"
                             disabled={!manualInput.trim() || callStatus === 'thinking'}
-                            className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 disabled:opacity-40 text-white text-xs font-semibold transition-all cursor-pointer shadow-xs flex items-center gap-1.5"
+                            className="px-4 py-2 rounded-xl bg-blue-700 hover:bg-blue-800 disabled:opacity-40 text-white text-xs font-semibold transition-all cursor-pointer shadow-xs flex items-center gap-1.5"
                         >
                             <PaperPlaneRight size={13} weight="bold" />
                             <span>Kirim Jawaban</span>
@@ -1296,7 +1296,7 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                         onClick={() => setShowSubtitles(!showSubtitles)}
                         className={`p-3.5 rounded-xl border transition-all cursor-pointer ${
                             showSubtitles 
-                                ? 'bg-emerald-50 border-emerald-500/40 text-emerald-800' 
+                                ? 'bg-blue-50 border-blue-500/40 text-blue-900' 
                                 : 'bg-slate-100 border-slate-200 text-slate-600 hover:text-slate-900'
                         }`}
                         title={showSubtitles ? 'Sembunyikan Subtitle' : 'Tampilkan Subtitle'}
@@ -1341,7 +1341,7 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                             {/* Modal Header */}
                             <div className="flex items-center justify-between border-b border-slate-100 pb-4">
                                 <div className="space-y-0.5">
-                                    <div className="text-[10px] font-mono text-emerald-700 uppercase font-bold">
+                                    <div className="text-[10px] font-mono text-blue-700 uppercase font-bold">
                                         EVALUASI MULTIMODAL LENGKAP
                                     </div>
                                     <h3 className="text-xl font-bold text-slate-900">
@@ -1350,7 +1350,7 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                                 </div>
                                 <div className="text-right font-mono">
                                     <div className="text-[10px] text-slate-500 uppercase">SKOR KELANCARAN</div>
-                                    <div className="text-3xl font-bold text-emerald-600">
+                                    <div className="text-3xl font-bold text-blue-700">
                                         {debriefData.fluency_score}/100
                                     </div>
                                 </div>
@@ -1360,19 +1360,19 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono text-center">
                                 <div className="p-3 bg-slate-50 border border-slate-200 rounded-xl shadow-xs">
                                     <div className="text-[9px] text-slate-500 uppercase">KESTABILAN NADA</div>
-                                    <div className="text-lg font-bold text-emerald-700 mt-0.5">
+                                    <div className="text-lg font-bold text-blue-700 mt-0.5">
                                         {debriefData.vocal_stability_score || 84}/100
                                     </div>
                                 </div>
                                 <div className="p-3 bg-slate-50 border border-slate-200 rounded-xl shadow-xs">
                                     <div className="text-[9px] text-slate-500 uppercase">EKSPRESI WAJAH</div>
-                                    <div className="text-lg font-bold text-emerald-700 mt-0.5">
+                                    <div className="text-lg font-bold text-blue-700 mt-0.5">
                                         {debriefData.facial_expression_score || 88}/100
                                     </div>
                                 </div>
                                 <div className="p-3 bg-slate-50 border border-slate-200 rounded-xl shadow-xs">
                                     <div className="text-[9px] text-slate-500 uppercase">KONTAK MATA</div>
-                                    <div className="text-lg font-bold text-emerald-700 mt-0.5">
+                                    <div className="text-lg font-bold text-blue-700 mt-0.5">
                                         {debriefData.eye_contact_score || 86}/100
                                     </div>
                                 </div>
@@ -1392,7 +1392,7 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                             {/* Actionable Solutions Blueprint */}
                             {debriefData.solutions && debriefData.solutions.length > 0 && (
                                 <div className="space-y-2.5">
-                                    <div className="text-[10px] font-mono text-emerald-700 uppercase font-bold flex items-center gap-1.5">
+                                    <div className="text-[10px] font-mono text-blue-700 uppercase font-bold flex items-center gap-1.5">
                                         <Sparkle size={13} weight="bold" />
                                         SOLUSI & TINDAKAN PERBAIKAN KHUSUS UNTUK ANDA:
                                     </div>
@@ -1400,7 +1400,7 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
                                         {debriefData.solutions.map((sol, idx) => (
                                             <div key={idx} className="p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-1 text-xs shadow-xs">
-                                                <div className="text-[10px] font-mono text-emerald-700 font-bold uppercase">
+                                                <div className="text-[10px] font-mono text-blue-700 font-bold uppercase">
                                                     {sol.category}
                                                 </div>
                                                 <div className="font-semibold text-slate-900 text-xs">
@@ -1418,13 +1418,13 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                             {/* Key Strengths & Next Drills */}
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
                                 <div className="space-y-1.5">
-                                    <div className="text-[10px] font-mono text-emerald-700 uppercase font-bold">
+                                    <div className="text-[10px] font-mono text-blue-700 uppercase font-bold">
                                         KEKUATAN UTAMA ANDA:
                                     </div>
                                     <ul className="space-y-1 text-slate-600 pl-1">
                                         {debriefData.strengths.map((s, idx) => (
                                             <li key={idx} className="flex items-start gap-2">
-                                                <span className="text-emerald-600 font-bold">•</span>
+                                                <span className="text-blue-700 font-bold">•</span>
                                                 <span>{s}</span>
                                             </li>
                                         ))}
@@ -1463,7 +1463,7 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
 
                                 <Link
                                     href="/"
-                                    className="px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold transition-all shadow-xs"
+                                    className="px-6 py-2.5 rounded-xl bg-blue-700 hover:bg-blue-800 text-white text-xs font-semibold transition-all shadow-xs"
                                 >
                                     <span>Selesai & Beranda</span>
                                 </Link>
@@ -1485,7 +1485,7 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                         >
                             <div className="flex items-center justify-between border-b border-slate-100 pb-3">
                                 <div className="flex items-center gap-2 text-slate-900 font-bold text-base">
-                                    <Key size={18} className="text-emerald-600" />
+                                    <Key size={18} className="text-blue-700" />
                                     <span>Konfigurasi Google Gemini AI</span>
                                 </div>
                                 <button
@@ -1511,7 +1511,7 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                                     </div>
                                     <div className="flex items-center justify-between">
                                         <span className="text-slate-500">Mesin Cadangan (Cloud):</span>
-                                        <span className={keyStatus.has_key ? 'text-emerald-700 font-bold' : 'text-slate-400'}>
+                                        <span className={keyStatus.has_key ? 'text-blue-700 font-bold' : 'text-slate-400'}>
                                             {keyStatus.has_key ? 'Google Gemini Siap' : 'Kunci Belum Terpasang'}
                                         </span>
                                     </div>
@@ -1526,7 +1526,7 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                                         value={apiKeyInput}
                                         onChange={(e) => setApiKeyInput(e.target.value)}
                                         placeholder="AIzaSy..."
-                                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 font-mono text-xs focus:bg-white focus:outline-none focus:border-emerald-600"
+                                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 font-mono text-xs focus:bg-white focus:outline-none focus:border-blue-600"
                                     />
 
                                     {keyMessage && (
@@ -1552,7 +1552,7 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                                         <button
                                             type="submit"
                                             disabled={isSavingKey}
-                                            className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold transition-all cursor-pointer shadow-xs"
+                                            className="px-4 py-2 rounded-xl bg-blue-700 hover:bg-blue-800 text-white text-xs font-semibold transition-all cursor-pointer shadow-xs"
                                         >
                                             {isSavingKey ? 'Menyimpan...' : 'Terapkan Kunci'}
                                         </button>
@@ -1566,7 +1566,7 @@ export default function AICallRoom({ persona, callMode = 'video' }) {
                                             href="https://aistudio.google.com/app/apikey"
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="text-emerald-600 hover:underline font-semibold"
+                                            className="text-blue-700 hover:underline font-semibold"
                                         >
                                             Google AI Studio &rarr;
                                         </a>

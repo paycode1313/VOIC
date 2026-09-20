@@ -204,13 +204,13 @@ export default function Studio({ sessionType = 'thesis_defense', defaultTitle = 
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
                             disabled={isRecording}
-                            className="text-xl sm:text-2xl font-bold bg-transparent border-b border-transparent hover:border-slate-300 dark:hover:border-white/[0.2] focus:border-emerald-500 focus:outline-none text-slate-900 dark:text-white w-full max-w-lg transition-colors py-0.5"
+                            className="text-xl sm:text-2xl font-bold bg-transparent border-b border-transparent hover:border-slate-300 dark:hover:border-white/[0.2] focus:border-blue-600 focus:outline-none text-slate-900 dark:text-white w-full max-w-lg transition-colors py-0.5"
                         />
                     </div>
 
                     <div className="flex items-center gap-3 font-mono text-xs text-slate-500 dark:text-slate-400">
                         <div className="px-3.5 py-1.5 rounded-xl bg-white dark:bg-[#10131a] border border-slate-200/80 dark:border-white/[0.08] flex items-center gap-2 shadow-2xs">
-                            <Sliders size={15} className="text-emerald-600 dark:text-emerald-400" />
+                            <Sliders size={15} className="text-blue-700 dark:text-blue-400" />
                             <span>KUALITAS AUDIO: <strong className="text-slate-900 dark:text-white">OPUS 48kHz</strong></span>
                         </div>
                     </div>
@@ -238,20 +238,20 @@ export default function Studio({ sessionType = 'thesis_defense', defaultTitle = 
                         {/* Pre-flight Guidance Card */}
                         <div className="p-5 bg-white dark:bg-[#0f1219] border border-slate-200/80 dark:border-white/[0.08] rounded-2xl text-xs space-y-2.5 shadow-xs">
                             <div className="text-slate-900 dark:text-white font-bold flex items-center gap-2 text-sm">
-                                <Handshake size={18} className="text-emerald-600 dark:text-emerald-400" weight="bold" />
+                                <Handshake size={18} className="text-blue-700 dark:text-blue-400" weight="bold" />
                                 <span>Panduan Ketenangan & Kalibrasi Sesi</span>
                             </div>
                             <ul className="space-y-1.5 text-slate-600 dark:text-slate-400 leading-relaxed pl-1">
                                 <li className="flex items-start gap-2">
-                                    <span className="text-emerald-600 dark:text-emerald-400 font-bold mt-0.5">•</span>
+                                    <span className="text-blue-700 dark:text-blue-400 font-bold mt-0.5">•</span>
                                     <span>Tarik napas perlahan sebelum mulai. Posisikan tubuh tegak dan nyaman di hadapan kamera.</span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-emerald-600 dark:text-emerald-400 font-bold mt-0.5">•</span>
+                                    <span className="text-blue-700 dark:text-blue-400 font-bold mt-0.5">•</span>
                                     <span>Pertahankan tatapan ke lensa kamera saat menyampaikan gagasan kunci.</span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-emerald-600 dark:text-emerald-400 font-bold mt-0.5">•</span>
+                                    <span className="text-blue-700 dark:text-blue-400 font-bold mt-0.5">•</span>
                                     <span>Gunakan jeda hening sejenak (1-2 detik) daripada mengisi kekosongan dengan "anu" atau "kayak".</span>
                                 </li>
                             </ul>
@@ -287,7 +287,7 @@ export default function Studio({ sessionType = 'thesis_defense', defaultTitle = 
 
                                 <div className="p-3.5 bg-slate-50 dark:bg-[#141822] border border-slate-200/80 dark:border-white/[0.06] rounded-xl font-mono">
                                     <div className="text-[10px] text-slate-500 dark:text-slate-400 uppercase font-medium">STATUS MIKROFON</div>
-                                    <div className={`text-sm font-bold mt-2 ${isRecording ? 'text-emerald-600 dark:text-emerald-400' : 'text-slate-500'}`}>
+                                    <div className={`text-sm font-bold mt-2 ${isRecording ? 'text-blue-700 dark:text-blue-400' : 'text-slate-500'}`}>
                                         {isRecording ? (isPaused ? 'DIJEDA' : 'MEREKAM') : 'STANDBY'}
                                     </div>
                                     <div className="text-[9px] text-slate-500 mt-0.5">WebAudio 48kHz</div>
@@ -296,8 +296,8 @@ export default function Studio({ sessionType = 'thesis_defense', defaultTitle = 
 
                             {/* Processing Indicator during upload */}
                             {isProcessing && (
-                                <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-500/30 text-emerald-800 dark:text-emerald-300 text-xs flex items-center gap-3 animate-pulse">
-                                    <SpinnerGap size={22} className="animate-spin text-emerald-600 dark:text-emerald-400 shrink-0" />
+                                <div className="p-4 rounded-xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-500/30 text-blue-900 dark:text-blue-200 text-xs flex items-center gap-3 animate-pulse">
+                                    <SpinnerGap size={22} className="animate-spin text-blue-700 dark:text-blue-400 shrink-0" />
                                     <div>
                                         <div className="font-bold">MENGANALISIS SESI LATIHAN...</div>
                                         <div className="text-[11px] text-slate-600 dark:text-slate-400 mt-0.5">
@@ -320,7 +320,7 @@ export default function Studio({ sessionType = 'thesis_defense', defaultTitle = 
                                         type="button"
                                         onClick={startRecording}
                                         disabled={!permissionGranted || isProcessing}
-                                        className="flex-1 py-3.5 px-5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm flex items-center justify-center gap-2.5 transition-all active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed shadow-xs cursor-pointer"
+                                        className="flex-1 py-3.5 px-5 rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-semibold text-sm flex items-center justify-center gap-2.5 transition-all active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed shadow-xs cursor-pointer"
                                     >
                                         <Microphone size={18} weight="bold" />
                                         <span>Mulai Latihan</span>

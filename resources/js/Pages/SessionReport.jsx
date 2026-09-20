@@ -79,7 +79,7 @@ export default function SessionReport({ session }) {
                 <div className="bg-white dark:bg-[#0f1219] border border-slate-200/80 dark:border-white/[0.08] rounded-2xl p-6 sm:p-8 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 shadow-xs">
                     <div className="space-y-3">
                         <div className="flex flex-wrap items-center gap-2 font-mono text-xs">
-                            <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/30 font-semibold uppercase tracking-wide">
+                            <span className="px-3 py-1 rounded-full bg-blue-50 text-blue-900 dark:bg-slate-900/80 dark:text-blue-300 border border-blue-200/80 dark:border-blue-900/50 font-semibold uppercase tracking-wide">
                                 {scenarioLabel}
                             </span>
                             <span className="text-slate-300 dark:text-slate-600">|</span>
@@ -105,11 +105,11 @@ export default function SessionReport({ session }) {
                             <div className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">
                                 SKOR KESELURUHAN
                             </div>
-                            <div className="text-4xl sm:text-5xl font-extrabold text-emerald-700 dark:text-emerald-400 tabular-nums">
+                            <div className="text-4xl sm:text-5xl font-extrabold text-blue-900 dark:text-blue-400 tabular-nums">
                                 {feedback?.overall_score || 85}
                                 <span className="text-base text-slate-400 font-normal">/100</span>
                             </div>
-                            <div className="text-[11px] text-emerald-700 dark:text-emerald-400 font-semibold">
+                            <div className="text-[11px] text-blue-700 dark:text-blue-400 font-semibold">
                                 {feedback?.overall_score >= 80 ? 'KOMPETEN & BERWIBAWA' : 'SIAP BERKEMBANG'}
                             </div>
                         </div>
@@ -122,7 +122,7 @@ export default function SessionReport({ session }) {
                     <div className="bg-white dark:bg-[#0f1219] border border-slate-200/80 dark:border-white/[0.08] rounded-2xl p-5 space-y-1.5 shadow-xs">
                         <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 text-xs font-semibold">
                             <span>KONTAK MATA</span>
-                            <Eye size={17} className="text-emerald-600 dark:text-emerald-400" weight="bold" />
+                            <Eye size={17} className="text-blue-700 dark:text-blue-400" weight="bold" />
                         </div>
                         <div className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white font-mono tabular-nums">
                             {metric?.eye_contact_percentage || 85}%
@@ -164,9 +164,9 @@ export default function SessionReport({ session }) {
                     <div className="bg-white dark:bg-[#0f1219] border border-slate-200/80 dark:border-white/[0.08] rounded-2xl p-5 space-y-1.5 shadow-xs">
                         <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 text-xs font-semibold">
                             <span>INDEKS GUGUP</span>
-                            <Target size={17} className="text-emerald-600 dark:text-emerald-400" weight="bold" />
+                            <Target size={17} className="text-blue-700 dark:text-blue-400" weight="bold" />
                         </div>
-                        <div className="text-2xl sm:text-3xl font-bold text-emerald-700 dark:text-emerald-400 font-mono tabular-nums">
+                        <div className="text-2xl sm:text-3xl font-bold text-blue-900 dark:text-blue-400 font-mono tabular-nums">
                             {metric?.nervousness_score || 18} <span className="text-xs font-normal text-slate-400">/100</span>
                         </div>
                         <div className="text-[11px] text-slate-500 font-mono">
@@ -179,7 +179,7 @@ export default function SessionReport({ session }) {
                 <div className="bg-white dark:bg-[#0f1219] border border-slate-200/80 dark:border-white/[0.08] rounded-2xl p-6 sm:p-7 space-y-6 shadow-xs">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 dark:border-white/[0.06] pb-4">
                         <div className="flex items-center gap-2.5">
-                            <Waveform size={20} className="text-emerald-600 dark:text-emerald-400" weight="bold" />
+                            <Waveform size={20} className="text-blue-700 dark:text-blue-400" weight="bold" />
                             <h2 className="text-sm font-bold text-slate-900 dark:text-white">
                                 Transkrip Rekaman & Deteksi Kata Jeda
                             </h2>
@@ -225,7 +225,7 @@ export default function SessionReport({ session }) {
                                                 item.is_filler 
                                                     ? 'bg-rose-50 text-rose-700 line-through decoration-rose-500 font-mono border border-rose-200 dark:bg-rose-950/60 dark:text-rose-300 dark:border-rose-500/40' 
                                                     : isCurrent 
-                                                        ? 'bg-emerald-600 text-white font-semibold scale-105 shadow-xs' 
+                                                        ? 'bg-blue-700 text-white font-semibold scale-105 shadow-xs' 
                                                         : 'text-slate-800 dark:text-slate-200 hover:bg-slate-200/60 dark:hover:bg-white/[0.08]'
                                             }`}
                                             title={item.is_filler ? `Kata jeda terdeteksi (${item.start}s)` : `Klik untuk memutar dari ${item.start}s`}
@@ -248,7 +248,7 @@ export default function SessionReport({ session }) {
                             <span>Kata Pengisi (*Filler Word*)</span>
                         </span>
                         <span className="flex items-center gap-2">
-                            <span className="w-3 h-3 rounded bg-emerald-600" />
+                            <span className="w-3 h-3 rounded bg-blue-700" />
                             <span>Kata Sedang Diputar</span>
                         </span>
                     </div>
@@ -260,14 +260,14 @@ export default function SessionReport({ session }) {
                     <div className="lg:col-span-7 space-y-6">
                         {/* Strengths Card */}
                         <div className="bg-white dark:bg-[#0f1219] border border-slate-200/80 dark:border-white/[0.08] rounded-2xl p-6 sm:p-7 space-y-4 shadow-xs">
-                            <div className="flex items-center gap-2 text-emerald-700 dark:text-emerald-400 text-xs font-mono font-bold uppercase tracking-wider">
-                                <CheckCircle size={18} weight="bold" className="text-emerald-600 dark:text-emerald-400" />
+                            <div className="flex items-center gap-2 text-blue-700 dark:text-blue-400 text-xs font-mono font-bold uppercase tracking-wider">
+                                <CheckCircle size={18} weight="bold" className="text-blue-700 dark:text-blue-400" />
                                 <span>POIN KELEBIHAN UTAMA</span>
                             </div>
                             <ul className="space-y-2.5 text-sm text-slate-700 dark:text-slate-300">
                                 {(feedback?.strengths || []).map((s, i) => (
                                     <li key={i} className="flex items-start gap-3">
-                                        <span className="text-emerald-600 dark:text-emerald-400 font-bold mt-0.5">•</span>
+                                        <span className="text-blue-700 dark:text-blue-400 font-bold mt-0.5">•</span>
                                         <span className="leading-relaxed">{s}</span>
                                     </li>
                                 ))}
@@ -291,15 +291,15 @@ export default function SessionReport({ session }) {
                         </div>
 
                         {/* Actionable Drills */}
-                        <div className="bg-white dark:bg-[#0f1219] border border-emerald-500/30 rounded-2xl p-6 sm:p-7 space-y-4 shadow-xs">
-                            <div className="flex items-center gap-2 text-emerald-700 dark:text-emerald-300 text-xs font-mono font-bold uppercase tracking-wider">
-                                <Lightning size={18} weight="bold" className="text-emerald-600 dark:text-emerald-400" />
+                        <div className="bg-white dark:bg-[#0f1219] border border-blue-500/20 rounded-2xl p-6 sm:p-7 space-y-4 shadow-xs">
+                            <div className="flex items-center gap-2 text-blue-700 dark:text-blue-300 text-xs font-mono font-bold uppercase tracking-wider">
+                                <Lightning size={18} weight="bold" className="text-blue-700 dark:text-blue-400" />
                                 <span>REKOMENDASI DRILL KONKRET</span>
                             </div>
                             <div className="space-y-3 text-sm text-slate-700 dark:text-slate-200">
                                 {(feedback?.actionable_drills || []).map((drill, i) => (
                                     <div key={i} className="p-4 bg-slate-50 dark:bg-[#141822] border border-slate-200/80 dark:border-white/[0.06] rounded-xl flex items-start gap-3.5">
-                                        <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950/70 border border-emerald-300 dark:border-emerald-500/40 dark:text-emerald-400 font-mono font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                                        <span className="w-6 h-6 rounded-full bg-blue-100 text-blue-900 dark:bg-blue-950/70 border border-blue-200 dark:border-blue-900/60 dark:text-blue-300 font-mono font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
                                             {i + 1}
                                         </span>
                                         <span className="leading-relaxed">{drill}</span>
@@ -322,11 +322,11 @@ export default function SessionReport({ session }) {
                                         <div key={key} className="space-y-1.5">
                                             <div className="flex justify-between text-xs font-mono">
                                                 <span className="capitalize text-slate-700 dark:text-slate-300 font-medium">{key}</span>
-                                                <span className="font-bold text-emerald-700 dark:text-emerald-400 tabular-nums">{val}%</span>
+                                                <span className="font-bold text-blue-900 dark:text-blue-400 tabular-nums">{val}%</span>
                                             </div>
                                             <div className="h-2 bg-slate-100 dark:bg-[#161a24] rounded-full overflow-hidden border border-slate-200/60 dark:border-white/[0.06]">
                                                 <div 
-                                                    className="h-full bg-emerald-600 dark:bg-emerald-500 rounded-full transition-all duration-500" 
+                                                    className="h-full bg-blue-700 dark:bg-blue-600 rounded-full transition-all duration-500" 
                                                     style={{ width: `${val}%` }} 
                                                 />
                                             </div>
@@ -338,7 +338,7 @@ export default function SessionReport({ session }) {
                             <div className="pt-4 border-t border-slate-100 dark:border-white/[0.06] space-y-3">
                                 <Link
                                     href={`/studio?type=${session.session_type}`}
-                                    className="w-full py-3.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs flex items-center justify-center gap-2 transition-all active:scale-[0.98] shadow-xs"
+                                    className="w-full py-3.5 px-4 rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-semibold text-xs flex items-center justify-center gap-2 transition-all active:scale-[0.98] shadow-xs"
                                 >
                                     <ArrowCounterClockwise size={16} weight="bold" />
                                     <span>Ulangi Sesi Latihan Ini</span>

@@ -14,12 +14,15 @@
 
     --color-surface-canvas: #f8fafc;
     --color-surface-panel: #ffffff;
-    --color-surface-elevated: #f1f5f9;
-    --color-border-hairline: rgba(0, 0, 0, 0.08);
-    --color-border-active: rgba(0, 0, 0, 0.16);
+    --color-surface-elevated: #f0f4f8;
+    --color-border-hairline: rgba(15, 23, 42, 0.08);
+    --color-border-active: rgba(37, 99, 235, 0.25);
 
-    --color-accent-emerald: #059669;
-    --color-accent-emerald-deep: #047857;
+    --color-accent-navy: #0f172a;
+    --color-accent-navy-deep: #020617;
+    --color-accent-cobalt: #1d4ed8;
+    --color-accent-blue: #2563eb;
+    --color-accent-ice: #eff6ff;
 }
 
 /* Custom Studio Scrollbar (Adaptive Dark & Light) */

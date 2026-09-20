@@ -34,7 +34,7 @@ export default function History({ sessions }) {
 
                     <Link
                         href="/studio"
-                        className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs transition-all active:scale-[0.98] shadow-xs shrink-0"
+                        className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-semibold text-xs transition-all active:scale-[0.98] shadow-xs shrink-0"
                     >
                         <Microphone size={16} weight="bold" />
                         <span>Mulai Sesi Baru</span>
@@ -48,7 +48,7 @@ export default function History({ sessions }) {
                         className="bg-white dark:bg-[#0f1219] border border-slate-200/80 dark:border-white/[0.08] rounded-2xl p-12 text-center space-y-4 shadow-xs max-w-xl mx-auto my-12"
                     >
                         <div className="w-14 h-14 rounded-2xl bg-slate-50 dark:bg-[#141822] border border-slate-200/80 dark:border-white/[0.08] text-slate-500 dark:text-slate-400 flex items-center justify-center mx-auto">
-                            <Trophy size={30} weight="light" className="text-emerald-600 dark:text-emerald-400" />
+                            <Trophy size={30} weight="light" className="text-blue-700 dark:text-blue-400" />
                         </div>
                         <div className="space-y-1">
                             <div className="text-base font-bold text-slate-900 dark:text-white">Belum Ada Sesi Latihan</div>
@@ -58,7 +58,7 @@ export default function History({ sessions }) {
                         </div>
                         <Link
                             href="/studio"
-                            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs shadow-xs"
+                            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-semibold text-xs shadow-xs"
                         >
                             <span>Buka Studio Latihan</span>
                             <ArrowRight size={14} weight="bold" />
@@ -77,25 +77,25 @@ export default function History({ sessions }) {
                                 >
                                     <Link
                                         href={`/sessions/${session.id}`}
-                                        className="group bg-white dark:bg-[#0f1219] border border-slate-200/80 dark:border-white/[0.08] hover:border-emerald-500/50 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 space-y-4 shadow-xs hover:shadow-md h-full block"
+                                        className="group bg-white dark:bg-[#0f1219] border border-slate-200/80 dark:border-white/[0.08] hover:border-blue-500/50 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 space-y-4 shadow-xs hover:shadow-md h-full block"
                                     >
                                         <div className="space-y-3">
                                             <div className="flex items-center justify-between">
-                                                <span className="text-[10px] px-2.5 py-0.5 rounded-md bg-emerald-50 text-emerald-800 dark:bg-[#161a24] border border-emerald-200 dark:border-white/[0.08] dark:text-emerald-400 font-bold font-mono uppercase">
+                                                <span className="text-[10px] px-2.5 py-0.5 rounded-md bg-blue-50 text-blue-900 dark:bg-slate-900/80 border border-blue-200/80 dark:border-blue-900/50 dark:text-blue-300 font-bold font-mono uppercase">
                                                     {formatSessionType(session.session_type)}
                                                 </span>
-                                                <span className="text-xs font-mono font-bold text-emerald-700 dark:text-emerald-400 tabular-nums">
+                                                <span className="text-xs font-mono font-bold text-blue-900 dark:text-blue-400 tabular-nums">
                                                     SKOR: {score}/100
                                                 </span>
                                             </div>
 
-                                            <h2 className="text-base font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-2 leading-snug">
+                                            <h2 className="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors line-clamp-2 leading-snug">
                                                 {session.title}
                                             </h2>
 
                                             <div className="grid grid-cols-2 gap-2 text-xs font-mono text-slate-500 dark:text-slate-400 pt-3 border-t border-slate-100 dark:border-white/[0.06]">
                                                 <div className="flex items-center gap-1.5">
-                                                    <Eye size={15} className="text-emerald-600 dark:text-emerald-400" weight="bold" />
+                                                    <Eye size={15} className="text-blue-700 dark:text-blue-400" weight="bold" />
                                                     <span>Kontak: <strong className="text-slate-900 dark:text-white">{session.metric?.eye_contact_percentage || 85}%</strong></span>
                                                 </div>
                                                 <div className="flex items-center gap-1.5">
@@ -110,7 +110,7 @@ export default function History({ sessions }) {
                                                 <Calendar size={13} />
                                                 <span>{new Date(session.created_at).toLocaleDateString('id-ID')}</span>
                                             </div>
-                                            <span className="text-emerald-700 dark:text-emerald-400 font-medium flex items-center gap-1 group-hover:translate-x-0.5 transition-transform text-[11px]">
+                                            <span className="text-blue-700 dark:text-blue-400 font-medium flex items-center gap-1 group-hover:translate-x-0.5 transition-transform text-[11px]">
                                                 Review Sesi &rarr;
                                             </span>
                                         </div>

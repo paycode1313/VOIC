@@ -84,18 +84,18 @@ export default function Sidebar({
         }
     };
 
-    // Diversified feature navigation items with distinct, tasteful signature colors
+    // Executive Corporate Navy & Ice Blue feature navigation
     const navItems = [
         {
             id: 'calls',
             label: 'Panggilan AI',
             subtitle: 'Simulasi Penguji & Rekan',
             badge: 'Live',
-            badgeClass: 'bg-blue-50 text-blue-700 border-blue-200/70 dark:bg-blue-950/60 dark:text-blue-300 dark:border-blue-800/50',
+            badgeClass: 'bg-blue-100/80 text-blue-900 border-blue-300/80 dark:bg-blue-950/70 dark:text-blue-200 dark:border-blue-700/60',
             icon: VideoCamera,
-            iconColor: 'text-blue-600 dark:text-blue-400',
-            iconBg: 'bg-blue-50 dark:bg-blue-950/50',
-            activeIndicator: 'bg-blue-600',
+            iconColor: 'text-blue-700 dark:text-blue-400',
+            iconBg: 'bg-blue-100/70 dark:bg-blue-950/60',
+            activeIndicator: 'bg-blue-700',
             route: 'call',
             href: '/?tab=calls'
         },
@@ -104,11 +104,11 @@ export default function Sidebar({
             label: 'Chat Gemini',
             subtitle: 'Formulasi Naskah & STAR',
             badge: '3.6',
-            badgeClass: 'bg-purple-50 text-purple-700 border-purple-200/70 dark:bg-purple-950/60 dark:text-purple-300 dark:border-purple-800/50',
+            badgeClass: 'bg-indigo-100/80 text-indigo-900 border-indigo-300/80 dark:bg-indigo-950/70 dark:text-indigo-200 dark:border-indigo-700/60',
             icon: Sparkle,
-            iconColor: 'text-purple-600 dark:text-purple-400',
-            iconBg: 'bg-purple-50 dark:bg-purple-950/50',
-            activeIndicator: 'bg-purple-600',
+            iconColor: 'text-indigo-700 dark:text-indigo-400',
+            iconBg: 'bg-indigo-100/70 dark:bg-indigo-950/60',
+            activeIndicator: 'bg-indigo-700',
             route: 'chat',
             href: '/?tab=chat'
         },
@@ -117,9 +117,9 @@ export default function Sidebar({
             label: 'Studio Mandiri',
             subtitle: 'Bilik Rekam & Telemetri',
             icon: Target,
-            iconColor: 'text-amber-600 dark:text-amber-400',
-            iconBg: 'bg-amber-50 dark:bg-amber-950/50',
-            activeIndicator: 'bg-amber-600',
+            iconColor: 'text-amber-800 dark:text-amber-400',
+            iconBg: 'bg-amber-100/70 dark:bg-amber-950/60',
+            activeIndicator: 'bg-amber-700',
             route: 'studio',
             href: '/studio'
         },
@@ -128,9 +128,9 @@ export default function Sidebar({
             label: 'Riwayat Sesi',
             subtitle: 'Histori & Analisis Skor',
             icon: ClockCounterClockwise,
-            iconColor: 'text-teal-600 dark:text-teal-400',
-            iconBg: 'bg-teal-50 dark:bg-teal-950/50',
-            activeIndicator: 'bg-teal-600',
+            iconColor: 'text-cyan-800 dark:text-cyan-400',
+            iconBg: 'bg-cyan-100/70 dark:bg-cyan-950/60',
+            activeIndicator: 'bg-cyan-700',
             route: 'history',
             href: '/history'
         }
@@ -154,7 +154,7 @@ export default function Sidebar({
     };
 
     const sidebarContent = (
-        <div className="flex flex-col h-full justify-between bg-white dark:bg-[#0c0e14] text-slate-800 dark:text-slate-200 border-r border-slate-200/70 dark:border-slate-800/70 transition-colors">
+        <div className="flex flex-col h-full justify-between bg-white dark:bg-[#0c0e14] text-slate-800 dark:text-slate-200 border-r border-slate-200/80 dark:border-slate-800/80 transition-colors">
             
             {/* Top Area: Brand & Main Navigation */}
             <div className="flex flex-col flex-1 overflow-y-auto px-3.5 py-4 space-y-6">
@@ -166,7 +166,7 @@ export default function Sidebar({
                         className="flex items-center gap-2.5 group select-none"
                         onClick={() => onCloseMobile && onCloseMobile()}
                     >
-                        <div className="w-9 h-9 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform">
+                        <div className="w-9 h-9 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 flex items-center justify-center shadow-sm ring-1 ring-blue-500/20 group-hover:scale-105 transition-transform">
                             <Waveform size={20} weight="bold" />
                         </div>
                         <div className="flex flex-col">
@@ -174,12 +174,12 @@ export default function Sidebar({
                                 <span className="font-mono font-bold text-base tracking-wider text-slate-900 dark:text-white">
                                     VOIC
                                 </span>
-                                <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-semibold">
-                                    STUDIO
+                                <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-blue-50 dark:bg-blue-950/60 text-blue-800 dark:text-blue-300 font-bold border border-blue-200/70 dark:border-blue-800/50">
+                                    EXECUTIVE
                                 </span>
                             </div>
-                            <span className="text-[11px] text-slate-400 dark:text-slate-500 font-normal tracking-tight -mt-0.5">
-                                AI Speech Coach
+                            <span className="text-[11px] text-slate-500 dark:text-slate-400 font-normal tracking-tight -mt-0.5">
+                                AI Speech & Pitch Coach
                             </span>
                         </div>
                     </Link>
@@ -212,7 +212,7 @@ export default function Sidebar({
 
                 {/* Section 1: Workspace Utama */}
                 <div className="space-y-1">
-                    <div className="px-2 pb-1 text-[11px] font-medium tracking-wider text-slate-400 dark:text-slate-500 uppercase">
+                    <div className="px-2 pb-1 text-[11px] font-mono font-semibold tracking-wider text-slate-400 dark:text-slate-500 uppercase">
                         Workspace
                     </div>
 
@@ -229,10 +229,10 @@ export default function Sidebar({
                                     id={`sidebar-item-${item.id}`}
                                     href={item.href}
                                     onClick={(e) => handleItemClick(item, e)}
-                                    className={`group relative flex items-center justify-between px-2.5 py-2 rounded-xl text-xs transition-colors cursor-pointer select-none ${
+                                    className={`group relative flex items-center justify-between px-2.5 py-2 rounded-xl text-xs transition-all cursor-pointer select-none ${
                                         isCurrent
-                                            ? 'bg-slate-100 text-slate-900 font-semibold dark:bg-slate-800/80 dark:text-white'
-                                            : 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/40 hover:text-slate-900 dark:hover:text-white'
+                                            ? 'bg-blue-50/80 text-blue-950 font-bold border border-blue-200/80 dark:bg-blue-950/40 dark:text-blue-100 dark:border-blue-800/50 shadow-2xs'
+                                            : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100/70 dark:hover:bg-slate-800/40 hover:text-slate-900 dark:hover:text-white'
                                     }`}
                                 >
                                     {/* Subtle active left pill */}
@@ -259,7 +259,7 @@ export default function Sidebar({
                                     </div>
 
                                     {item.badge && (
-                                        <span className={`text-[10px] font-mono font-medium px-1.5 py-0.2 rounded border shrink-0 ${item.badgeClass}`}>
+                                        <span className={`text-[10px] font-mono font-bold px-1.5 py-0.2 rounded border shrink-0 ${item.badgeClass}`}>
                                             {item.badge}
                                         </span>
                                     )}
@@ -370,16 +370,16 @@ export default function Sidebar({
 
                 {/* User Profile Card or Auth Options */}
                 {user ? (
-                    <div className="flex items-center justify-between p-2 rounded-xl bg-white dark:bg-slate-800/60 border border-slate-200/70 dark:border-slate-700/60">
-                        <div className="flex items-center gap-2 min-w-0">
-                            <div className="w-7 h-7 rounded-lg bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-semibold text-xs flex items-center justify-center shrink-0">
+                    <div className="flex items-center justify-between p-2 rounded-xl bg-white dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 shadow-2xs">
+                        <div className="flex items-center gap-2.5 min-w-0">
+                            <div className="w-8 h-8 rounded-lg bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-bold text-xs flex items-center justify-center shrink-0 shadow-2xs ring-1 ring-blue-500/20">
                                 {user.name ? user.name.charAt(0).toUpperCase() : 'U'}
                             </div>
                             <div className="flex flex-col min-w-0 text-left">
-                                <span className="text-xs font-medium text-slate-900 dark:text-white truncate">
+                                <span className="text-xs font-semibold text-slate-900 dark:text-white truncate">
                                     {user.name}
                                 </span>
-                                <span className="text-[10px] text-slate-400 truncate">
+                                <span className="text-[10px] font-mono text-blue-700 dark:text-blue-300 font-medium truncate">
                                     {formatRole(user.target_role)}
                                 </span>
                             </div>
@@ -388,7 +388,7 @@ export default function Sidebar({
                         <button
                             type="button"
                             onClick={handleLogout}
-                            className="p-1 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/40 transition-colors cursor-pointer shrink-0"
+                            className="p-1.5 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/40 transition-colors cursor-pointer shrink-0"
                             title="Keluar dari akun"
                             aria-label="Logout"
                         >
@@ -400,7 +400,7 @@ export default function Sidebar({
                         <Link
                             href="/login"
                             onClick={() => onCloseMobile && onCloseMobile()}
-                            className="flex items-center justify-center gap-1 py-1.5 px-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium hover:bg-slate-50 transition-colors"
+                            className="flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/90 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-medium hover:bg-slate-50 transition-colors shadow-2xs"
                         >
                             <SignIn size={13} />
                             <span>Masuk</span>
@@ -408,7 +408,7 @@ export default function Sidebar({
                         <Link
                             href="/register"
                             onClick={() => onCloseMobile && onCloseMobile()}
-                            className="flex items-center justify-center gap-1 py-1.5 px-2 rounded-lg bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-100 text-white dark:text-slate-900 text-xs font-medium transition-colors"
+                            className="flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-lg bg-blue-700 hover:bg-blue-800 text-white text-xs font-semibold shadow-xs transition-colors"
                         >
                             <UserPlus size={13} />
                             <span>Daftar</span>

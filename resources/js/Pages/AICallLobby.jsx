@@ -51,7 +51,7 @@ export default function AICallLobby({ personas = [] }) {
             <div className="max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-10 space-y-10">
                 {/* Header Banner */}
                 <div className="space-y-2">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-[#111622] border border-emerald-200 dark:border-white/[0.08] text-emerald-800 dark:text-slate-300 font-mono text-[11px]">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-slate-900/80 border border-blue-200/80 dark:border-blue-900/50 text-blue-950 dark:text-blue-200 font-mono text-[11px]">
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)] animate-pulse" />
                         <span>AI LOKAL MANDIRI · INTERAKTIF DUA ARAH · REAL-TIME VOICE</span>
                     </div>
@@ -78,16 +78,16 @@ export default function AICallLobby({ personas = [] }) {
                                     onClick={() => setSelectedMode('video')}
                                     className={`p-4 rounded-2xl border text-left flex flex-col justify-between gap-4 transition-all cursor-pointer relative ${
                                         selectedMode === 'video'
-                                            ? 'bg-emerald-50/80 dark:bg-emerald-950/40 border-emerald-500/60 text-slate-900 dark:text-white ring-1 ring-emerald-500/40 shadow-xs'
+                                            ? 'bg-blue-50/80 dark:bg-blue-950/40 border-blue-500/60 text-slate-900 dark:text-white ring-1 ring-blue-500/40 shadow-xs'
                                             : 'bg-white dark:bg-[#0f1219] border-slate-200/80 dark:border-white/[0.08] text-slate-600 dark:text-slate-400 hover:border-slate-300 dark:hover:border-white/[0.18]'
                                     }`}
                                 >
                                     <div className="flex items-center justify-between">
-                                        <div className={`p-2.5 rounded-xl ${selectedMode === 'video' ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-400' : 'bg-slate-100 text-slate-500 dark:bg-[#161a24] dark:text-slate-400'}`}>
+                                        <div className={`p-2.5 rounded-xl ${selectedMode === 'video' ? 'bg-blue-100 text-blue-800 dark:bg-blue-500/20 dark:text-blue-300' : 'bg-slate-100 text-slate-500 dark:bg-[#161a24] dark:text-slate-400'}`}>
                                             <VideoCamera size={22} weight="bold" />
                                         </div>
                                         {selectedMode === 'video' && (
-                                            <span className="w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center">
+                                            <span className="w-5 h-5 rounded-full bg-blue-700 text-white flex items-center justify-center">
                                                 <Check size={12} weight="bold" />
                                             </span>
                                         )}
@@ -100,7 +100,7 @@ export default function AICallLobby({ personas = [] }) {
                                             Kamera dan mikrofon aktif. Tatap muka langsung dengan avatar Rifai serta deteksi kinetika tatapan mata dan ekspresi.
                                         </p>
                                     </div>
-                                    <div className="text-[10px] font-mono font-semibold text-emerald-700 dark:text-emerald-400">
+                                    <div className="text-[10px] font-mono font-semibold text-blue-700 dark:text-blue-400">
                                         Rekomendasi: Interaksi Penuh & Tatap Muka
                                     </div>
                                 </button>
@@ -111,16 +111,16 @@ export default function AICallLobby({ personas = [] }) {
                                     onClick={() => setSelectedMode('voice')}
                                     className={`p-4 rounded-2xl border text-left flex flex-col justify-between gap-4 transition-all cursor-pointer relative ${
                                         selectedMode === 'voice'
-                                            ? 'bg-emerald-50/80 dark:bg-emerald-950/40 border-emerald-500/60 text-slate-900 dark:text-white ring-1 ring-emerald-500/40 shadow-xs'
+                                            ? 'bg-blue-50/80 dark:bg-blue-950/40 border-blue-500/60 text-slate-900 dark:text-white ring-1 ring-blue-500/40 shadow-xs'
                                             : 'bg-white dark:bg-[#0f1219] border-slate-200/80 dark:border-white/[0.08] text-slate-600 dark:text-slate-400 hover:border-slate-300 dark:hover:border-white/[0.18]'
                                     }`}
                                 >
                                     <div className="flex items-center justify-between">
-                                        <div className={`p-2.5 rounded-xl ${selectedMode === 'voice' ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-400' : 'bg-slate-100 text-slate-500 dark:bg-[#161a24] dark:text-slate-400'}`}>
+                                        <div className={`p-2.5 rounded-xl ${selectedMode === 'voice' ? 'bg-blue-100 text-blue-800 dark:bg-blue-500/20 dark:text-blue-300' : 'bg-slate-100 text-slate-500 dark:bg-[#161a24] dark:text-slate-400'}`}>
                                             <PhoneCall size={22} weight="bold" />
                                         </div>
                                         {selectedMode === 'voice' && (
-                                            <span className="w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center">
+                                            <span className="w-5 h-5 rounded-full bg-blue-700 text-white flex items-center justify-center">
                                                 <Check size={12} weight="bold" />
                                             </span>
                                         )}
@@ -133,7 +133,7 @@ export default function AICallLobby({ personas = [] }) {
                                             Hanya mikrofon tanpa kamera. Konsol panggilan audio santai dengan visualizer gelombang suara vokal.
                                         </p>
                                     </div>
-                                    <div className="text-[10px] font-mono font-semibold text-emerald-700 dark:text-emerald-400">
+                                    <div className="text-[10px] font-mono font-semibold text-blue-700 dark:text-blue-400">
                                         Rekomendasi: Ngobrol Santai & Phone Chat
                                     </div>
                                 </button>
@@ -145,19 +145,19 @@ export default function AICallLobby({ personas = [] }) {
                             <label className="block text-xs font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider font-semibold">
                                 2. PARTNER AI LOKAL ANDA
                             </label>
-                            <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0f1219] border border-emerald-500/30 shadow-xs space-y-4">
+                            <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0f1219] border border-blue-500/20 shadow-xs space-y-4">
                                 <div className="flex items-start gap-4">
-                                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center text-white font-bold text-2xl shadow-md shrink-0 border border-emerald-400/30">
+                                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-700 to-slate-900 flex items-center justify-center text-white font-bold text-2xl shadow-md shrink-0 border border-blue-400/30">
                                         R
                                     </div>
                                     <div className="flex-1 min-w-0">
                                         <div className="flex items-center gap-2">
                                             <span className="text-lg font-bold text-slate-900 dark:text-white">Rifai</span>
-                                            <span className="text-[10px] font-mono text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/80 px-2 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-500/40 font-semibold">
+                                            <span className="text-[10px] font-mono text-blue-800 dark:text-blue-200 bg-blue-50 dark:bg-blue-950/80 px-2 py-0.5 rounded-full border border-blue-200 dark:border-blue-900/60 font-semibold">
                                                 AI Lokal Buatan Kita
                                             </span>
                                         </div>
-                                        <div className="text-xs font-mono text-emerald-700 dark:text-emerald-400 mt-0.5 font-medium">
+                                        <div className="text-xs font-mono text-blue-700 dark:text-blue-400 mt-0.5 font-medium">
                                             {rifaiPersona.role}
                                         </div>
                                         <p className="text-xs text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
@@ -188,21 +188,21 @@ export default function AICallLobby({ personas = [] }) {
                                 <span className="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase font-semibold">
                                     PRATINJAU SESI PANGGILAN
                                 </span>
-                                <span className="text-[10px] font-mono font-bold text-emerald-700 dark:text-emerald-400 uppercase bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-200 dark:border-emerald-500/30">
+                                <span className="text-[10px] font-mono font-bold text-blue-800 dark:text-blue-300 uppercase bg-blue-50 dark:bg-blue-950/60 px-2 py-0.5 rounded border border-blue-200 dark:border-blue-800/40">
                                     {selectedMode === 'video' ? 'VIDEO CALL' : 'VOICE ONLY'}
                                 </span>
                             </div>
 
                             {/* Persona Badge Card */}
                             <div className="flex items-center gap-4 p-4 bg-slate-50 dark:bg-[#141822] rounded-xl border border-slate-200/80 dark:border-white/[0.06]">
-                                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center text-white font-bold text-lg shadow-xs shrink-0 border border-emerald-400/30">
+                                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-700 to-slate-900 flex items-center justify-center text-white font-bold text-lg shadow-xs shrink-0 border border-blue-400/30">
                                     R
                                 </div>
                                 <div className="min-w-0">
                                     <div className="text-base font-bold text-slate-900 dark:text-white truncate">
                                         Rifai
                                     </div>
-                                    <div className="text-xs font-mono text-emerald-700 dark:text-emerald-400 font-medium">
+                                    <div className="text-xs font-mono text-blue-700 dark:text-blue-400 font-medium">
                                         {rifaiPersona.role}
                                     </div>
                                     <div className="text-[11px] text-slate-500 truncate mt-0.5">
@@ -235,11 +235,11 @@ export default function AICallLobby({ personas = [] }) {
                             {/* Session Capabilities */}
                             <div className="space-y-2 text-xs text-slate-600 dark:text-slate-400 pt-1">
                                 <div className="flex items-center gap-2">
-                                    <ShieldCheck size={16} className="text-emerald-600 dark:text-emerald-400" />
+                                    <ShieldCheck size={16} className="text-blue-700 dark:text-blue-400" />
                                     <span>100% Percakapan privat di komputermu sendiri</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <Sliders size={16} className="text-emerald-600 dark:text-emerald-400" />
+                                    <Sliders size={16} className="text-blue-700 dark:text-blue-400" />
                                     <span>Fitur interupsi suara & tombol sela instan</span>
                                 </div>
                             </div>
@@ -248,7 +248,7 @@ export default function AICallLobby({ personas = [] }) {
                             <button
                                 type="button"
                                 onClick={handleStartCall}
-                                className="w-full py-3.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm flex items-center justify-center gap-2 transition-all active:scale-[0.98] shadow-xs cursor-pointer"
+                                className="w-full py-3.5 px-4 rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-bold text-sm flex items-center justify-center gap-2 transition-all active:scale-[0.98] shadow-xs cursor-pointer"
                             >
                                 <span>{selectedMode === 'video' ? 'Mulai Video Call dengan Rifai' : 'Mulai Panggilan Suara dengan Rifai'}</span>
                                 <ArrowRight size={16} weight="bold" />
